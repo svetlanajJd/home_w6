@@ -1,4 +1,9 @@
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+
+import static java.lang.System.out;
+import static java.util.Arrays.*;
 
 public class Main {
     public static int[] generateRandomArray() {
@@ -20,8 +25,10 @@ public class Main {
         }
         System.out.println("Сумма трат за месяц составила " + sum + " рублей");
         System.out.println("Задание 2");
-        int maxWeight = 100_000;
-        int minWeight = 200_000;
+
+
+        int maxWeight = arr[0];
+        int minWeight = arr[0];
         for (final int a : arr) {
             if (a > maxWeight) {
                 maxWeight = a;
@@ -36,15 +43,25 @@ public class Main {
         System.out.println("Максимальная сумма трат за день составила " + maxWeight + " рублей");
 
         System.out.println("Задание 3");
-        System.out.println("Средняя сумма трат за месяц составила " + (double) sum / 30 + " рублей");
+        System.out.println("Средняя сумма трат за месяц составила " + (double) sum / arr.length + " рублей");
 
         System.out.println("Задание 4");
         char[] reverseFullName = {'n', 'a', 'v', 'i', ' ', 'v', 'o', 'n', 'a', 'v', 'i'};
         for (int i = reverseFullName.length - 1; i != -1; i--) {
-            System.out.print(reverseFullName[i]);
+            out.print(reverseFullName[i]);
+
         }
+
+
+
     }
-}
+
+
+
+
+
+    }
+
 
 
 
